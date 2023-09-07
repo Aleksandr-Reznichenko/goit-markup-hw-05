@@ -63,7 +63,9 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button class="hero-button" type="button">Order Service</button>
+          <button class="hero-button" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <!-- Features -->
@@ -530,7 +532,7 @@
             digital marketing & growth solutions.
           </p>
         </div>
-        <!-- Footer social media -->
+        <!-- Social media -->
         <div class="footer-social">
           <p class="footer-headline">Social media</p>
 
@@ -585,7 +587,159 @@
             </li>
           </ul>
         </div>
+        <!-- Subscribe Form -->
+        <div class="footer-subscribe">
+          <p class="footer-headline-subscribe">Subscribe</p>
+
+          <form class="subscribe-form" name="subscribe-form">
+            <input
+              class="subscribe-input"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              required
+            />
+            <button class="subscribe-button" type="submit">
+              Subscribe
+              <svg
+                class="subscribe-telegram-icon"
+                aria-label="telegram icon"
+                width="24"
+                height="24"
+              >
+                <use href="./images/icons.svg#icon-telegram"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
+
+    <!-- Modal Window -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <!-- Close Button -->
+        <button class="modal-close-button" type="button" data-modal-close>
+          <svg
+            class="modal-close-icon"
+            aria-label="close icon"
+            width="8"
+            height="8"
+          >
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <h2 class="modal-subject">
+          Leave your contacts and we will call you back
+        </h2>
+
+        <!-- Contact Form -->
+        <form class="application-form" name="application-form">
+          <div class="contact-form">
+            <label class="contact-label">
+              Name
+              <div class="form-field">
+                <input
+                  class="contact-input"
+                  type="text"
+                  name="user-name"
+                  required
+                />
+                <svg
+                  class="contact-icon"
+                  aria-label="icon person"
+                  width="18"
+                  height="18"
+                >
+                  <use href="./images/icons.svg#icon-person"></use>
+                </svg>
+              </div>
+            </label>
+
+            <label class="contact-label">
+              Phone
+              <div class="form-field">
+                <input
+                  class="contact-input"
+                  type="tel"
+                  name="user-phone"
+                  maxlength="13"
+                  required
+                />
+                <svg
+                  class="contact-icon"
+                  aria-label="icon phone"
+                  width="18"
+                  height="24"
+                >
+                  <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
+              </div>
+            </label>
+
+            <label class="contact-label">
+              Email
+              <div class="form-field">
+                <input
+                  class="contact-input"
+                  type="email"
+                  name="user-email"
+                  required
+                />
+                <svg
+                  class="contact-icon"
+                  aria-label="icon email"
+                  width="18"
+                  height="24"
+                >
+                  <use href="./images/icons.svg#icon-email"></use>
+                </svg>
+              </div>
+            </label>
+
+            <label class="contact-label">
+              Comment
+              <div class="form-field">
+                <textarea
+                  class="contact-textarea"
+                  name="user-comment"
+                  placeholder="Text input"
+                ></textarea>
+              </div>
+            </label>
+          </div>
+          <!-- Checkbox -->
+          <div class="checkbox-form">
+            <input
+              class="checkbox-input visually-hidden"
+              type="checkbox"
+              name="privacy-policy"
+              value="Terms of the Privacy Policy"
+              id="privacy-policy"
+              required
+            />
+            <label class="checkbox-label" for="privacy-policy">
+              <span class="agreement-checkbox">
+                <svg
+                  class="agreement-checkbox-icon"
+                  aria-label="instagram icon"
+                  width="10"
+                  height="8"
+                >
+                  <use href="./images/icons.svg#icon-vector"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a class="form-link" href="">Privacy Policy</a>
+            </label>
+          </div>
+          <!-- Send Button -->
+          <button class="modal-send-button" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
