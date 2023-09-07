@@ -763,6 +763,10 @@ button {
   fill: var(--social-icon-color);
 }
 
+.checkbox-input:focus + .checkbox-label > .agreement-checkbox {
+  outline: 1px solid var(--prymary-accent-color);
+}
+
 .checkbox-form-link {
   color: var(--prymary-accent-color);
   line-height: 1.3;
